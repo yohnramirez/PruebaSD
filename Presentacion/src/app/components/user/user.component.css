@@ -1,0 +1,75 @@
+.wrapper {
+    padding: 20px;
+    margin: 20px;
+}
+
+.title {
+    font-size: 30px;
+    text-align: left;
+}
+
+.search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    padding: 15px;
+    margin: 0 0 10px 0;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: darkgrey;
+    color: black;
+}
+
+.search-button:hover {
+    opacity: .8;
+}
+
+ng-icon {
+  vertical-align: middle;
+}
+
+.arrow-button {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border-collapse: collapse;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}

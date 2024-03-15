@@ -1,0 +1,37 @@
+<section class="wrapper">
+  <h1 class="title">Consulta de usuarios</h1>
+  <div class="table-responsive">
+    <button (click)="getUsers()" class="search-button">Buscar</button>
+    <table class="table table-striped" *ngIf="users.length > 0; else noUsersMessage">
+      <thead>
+        <tr>
+          <th>
+            <span>Id</span>
+            <button (click)="toggleSort('usuId')" class="arrow-button">
+              <ng-icon *ngIf="sortOrder === 'asc'" name="bootstrapArrowDownShort"></ng-icon>
+              <ng-icon *ngIf="sortOrder === 'desc'" name="bootstrapArrowUpShort"></ng-icon>
+            </button>
+          </th>
+          <th>
+            <span>Nombre</span>
+            <button (click)="toggleSort('nombre')" class="arrow-button">
+              <ng-icon *ngIf="sortOrder === 'asc'" name="bootstrapArrowDownShort"></ng-icon>
+              <ng-icon *ngIf="sortOrder === 'desc'" name="bootstrapArrowUpShort"></ng-icon>
+            </button>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users;">
+          <td>{{ user.usuId }}</td>
+          <td>{{ user.nombre }} {{ user.apellido }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ng-template #noUsersMessage>
+      <p>No hay usuarios disponibles.</p>
+    </ng-template>
+  </div>
+</section>
+
